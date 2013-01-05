@@ -1,7 +1,7 @@
 MANDIR = $(DESTDIR)/usr/share/man/man1
 BINDIR = $(DESTDIR)/usr/bin
 
-gitpython:
+gitpython: gitpython-check.py
 	python gitpython-check.py
 
 .PHONY: install
