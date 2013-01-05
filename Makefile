@@ -2,7 +2,7 @@ MANDIR = $(DESTDIR)/usr/share/man/man1
 BINDIR = $(DESTDIR)/usr/bin
 
 gitpython:
-	echo "from git import __version__\nfrom distutils.version import LooseVersion\nif LooseVersion(__version__) < '0.3.0':\n\traise ImportError('gitpython 0.3.x required.')" | python
+	python gitpython-check.py
 
 .PHONY: install
 install: gitpython
